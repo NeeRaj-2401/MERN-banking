@@ -32,7 +32,7 @@ These environment variables are necessary for the backend server to establish th
 Username: admin1
 Password: admin1
 ```
-
+You can explore few others admin credentials in `backend > defaulrUsers.js `
 
 ---
 
