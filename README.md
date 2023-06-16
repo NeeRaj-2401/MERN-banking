@@ -30,7 +30,7 @@ These environment variables are necessary for the backend server to establish th
 **NOTE 2:** To login as a user, you can use the following default user credentials:
 ```
 Username: admin1
-Password: admin2
+Password: admin1
 ```
 
 
