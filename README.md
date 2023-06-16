@@ -20,8 +20,8 @@ Frontend:
 
 ```
 PORT=4040
-CONNECTION_URL="mongodb+srv://admin:admin@cluster0.b7eppky.mongodb.net/"
-SECRECT_KEY="NEERAJ_BANKING"
+CONNECTION_URL=""
+SECRECT_KEY=""
 ```
 
 These environment variables are necessary for the backend server to establish the port, database connection, and secret key for authentication.
