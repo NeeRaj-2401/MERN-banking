@@ -16,7 +16,7 @@ Frontend:
 
 ---
 
-**NOTE:** Before running the project, make sure to create a `.env` file in the `backend` directory with the following information:
+**NOTE 1:** Before running the project, make sure to create a `.env` file in the `backend` directory with the following information:
 
 ```
 PORT=4040
@@ -25,3 +25,31 @@ SECRECT_KEY=""
 ```
 
 These environment variables are necessary for the backend server to establish the port, database connection, and secret key for authentication.
+
+
+**NOTE 2:** To login as a user, you can use the following default user credentials:
+```
+Username: admin1
+Password: admin2
+```
+
+
+---
+
+## API Routes
+
+### User Routes
+- `POST /users/login-user`: Login a user.
+- `POST /users/register-user`: Register a new user.
+- `POST /users/get-user-balance`: Get the balance of a user.
+- `POST /users/deposit-money`: Deposit money into a user's account.
+- `POST /users/withdraw-money`: Withdraw money from a user's account.
+- `POST /users/get-all-users`: Get data of all users.
+- `POST /users/get-user-data`: Get data of a specific user.
+
+### Transaction Routes
+- `POST /transactions/get-user-transaction`: Get transactions of a user.
+
+---
+
+Feel free to explore and interact with these API routes to perform various banking operations and retrieve user data.
