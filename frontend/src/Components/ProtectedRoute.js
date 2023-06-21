@@ -20,10 +20,8 @@ function checkCookiesExist() {
   }
   return true;
 }
-const ProtectedRoute = ({ component: Component, ...rest }) => {
-  console.log(rest);
+const ProtectedRoute = ({ component: Component, path, ...rest }) => {
   const isAuthenticated = checkCookiesExist();
-
   if (!isAuthenticated) {
     cookies.remove("token");
     cookies.remove("balance");
@@ -33,7 +31,17 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
     cookies.remove("username");
     return <Navigate to="/login" replace />;
   }
+  if (path === 'viewUsers' && cookies.get('username')) {
+    const username = cookies.get('username');
+    if ( username && (username.includes('admin') || username.includes('admin1') || username.includes('admin2') || username.includes('admin3'))) {
+      return <Component {...rest} />;
+    } else {
+      return <Navigate to="/not-found" replace />;
+    }
+  }
+  
   return <Component {...rest} />;
 };
 
 export default ProtectedRoute;
+

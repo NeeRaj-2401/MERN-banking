@@ -8,6 +8,7 @@ import AllUsers from "./Components/Users/Users";
 import UserDetails from "./Components/Users/UserDetails";
 import Logout from "./Components/Users/Logout";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import AccessDenied from "./Components/AccessDenied";
 
 const App = () => {
   const isRestrictedPath = (path) => {
@@ -29,11 +30,15 @@ const App = () => {
           />
           <Route
             path="/view-all-users"
-            element={<ProtectedRoute component={AllUsers} />}
+            element={<ProtectedRoute component={AllUsers} path="viewUsers" />}
           />
           <Route
             path="/user/:userId"
             element={<ProtectedRoute component={UserDetails} />}
+          />
+          <Route
+            path="/not-found"
+            element={<ProtectedRoute component={AccessDenied} />}
           />
         </Routes>
       </div>

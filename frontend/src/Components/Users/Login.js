@@ -46,9 +46,13 @@ const Login = () => {
           cookies.set("email", user.email);
           cookies.set("contact", user.phoneNumber);
           cookies.set("token", res.data.accessToken);
-          swal("Login Successful", "", "success").then(() =>
-            window.location.replace("http://localhost:3000/transactions")
-          );
+          swal("Login Successful", "", "success").then(() => {
+            if (user.username.includes("admin")) {
+              window.location.replace("http://localhost:3000/view-all-users");
+            } else {
+              window.location.replace("http://localhost:3000/transactions");
+            }
+          });
         } else {
           swal("Error!", res.data.message, "error");
         }
