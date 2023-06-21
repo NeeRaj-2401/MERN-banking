@@ -223,7 +223,7 @@ export default function Transactions() {
     <>
       <Paper className={classes.root}>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <div>
+          <div style={{ flex: "1 1 auto", margin: "0 1rem" }}>
             <Typography variant="h6">User Information:</Typography>
             <Typography variant="body1">
               <b>Name:</b> {user.firstName} {user.lastName}
@@ -239,7 +239,7 @@ export default function Transactions() {
             </Typography>
           </div>
 
-          <div style={{ marginLeft: "auto", marginTop: "10%" }}>
+          <div style={{ marginLeft: "auto", marginTop: "10%", marginRight: "1rem"  }}>
             <Typography variant="h6" gutterBottom>
               Current Balance: {balance}
             </Typography>
@@ -247,6 +247,7 @@ export default function Transactions() {
         </div>
         <br />
       </Paper>
+
       <Paper className={classes.root}>
         <TableContainer className={classes.container}>
           <Table stickyHeader aria-label="sticky table">
