@@ -164,8 +164,13 @@ export const withdrawMoney = async (req, res) => {
 export const getAllUsers = async (req, res) => {
   try {
     let users = await UserMessage.find({});
+
+    // Filter out users where the username includes 'admin'
+    users = users.filter((user) => !user.username.includes("admin"));
+
     users = users.map((user) => ({
       userId: user._id,
+      username:user.username,
       accountNumber: user.accountNumber,
       balance: user.balance,
     }));

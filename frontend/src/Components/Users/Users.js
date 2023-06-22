@@ -47,7 +47,11 @@ export default function AllUsers() {
     await axios
       .post("http://localhost:4040/users/get-all-users", {})
       .then((res) => {
-        setRows(res.data.users);
+        // Filter out rows where the username includes 'admin'
+        const filteredRows = res.data.users.filter(
+          (user) => !user.username.includes("admin")
+        );
+        setRows(filteredRows);
       })
       .catch((err) => console.log(err));
   };
