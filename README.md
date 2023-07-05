@@ -1,6 +1,12 @@
 # MERN-banking
 
----
+<hr>
+
+
+https://github.com/NeeRaj-2401/MERN-banking/assets/88180887/af70437d-e2d7-4af5-ad4f-ec5c0dc39d22
+
+
+<hr>
 
 ## Steps to Run the Project Locally
 
@@ -14,7 +20,7 @@ Frontend:
 2. Run the command `npm i --force` to install the required dependencies.
 3. Start the frontend development server by running `npm start`.
 
----
+<hr>
 
 **NOTE 1:** Before running the project, make sure to create a `.env` file in the `backend` directory with the following information:
 
@@ -34,7 +40,7 @@ Password: admin1
 ```
 You can explore few others admin credentials in `backend > defaulrUsers.js `
 
----
+<hr>
 
 ## API Routes
 
@@ -50,6 +56,6 @@ You can explore few others admin credentials in `backend > defaulrUsers.js `
 ### Transaction Routes
 - `POST /transactions/get-user-transaction`: Get transactions of a user.
 
----
+<hr>
 
 Feel free to explore and interact with these API routes to perform various banking operations and retrieve user data.
